@@ -67,7 +67,7 @@ const Login = () => {
         });
 
         setTimeout(() => {
-          window.location.href = `https://refinder-backend.onrender.com/admin-auth?token=${data.token}`;
+          window.location.href = `https://refinder-adminpanel.vercel.app/admin-auth?token=${data.token}`;
         }, 2000);
 
       }
