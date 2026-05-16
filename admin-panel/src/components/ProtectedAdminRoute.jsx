@@ -13,7 +13,7 @@ const ProtectedAdminRoute = ({ children }) => {
       return;
     }
 
-    fetch("http://127.0.0.1:5000/api/verify-admin", {
+    fetch("https://refinder-backend.onrender.com/api/verify-admin", {
       headers: {
         Authorization: `Bearer ${token}`
       }
