@@ -18,7 +18,7 @@ const Login = () => {
 
     try {
 
-      const res = await fetch("http://127.0.0.1:5000/api/login", {
+      const res = await fetch("https://refinder-backend.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -67,7 +67,7 @@ const Login = () => {
         });
 
         setTimeout(() => {
-          window.location.href = `http://localhost:3001/admin-auth?token=${data.token}`;
+          window.location.href = `https://refinder-backend.onrender.com/admin-auth?token=${data.token}`;
         }, 2000);
 
       }
