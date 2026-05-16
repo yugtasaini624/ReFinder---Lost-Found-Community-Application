@@ -32,7 +32,7 @@ const ProtectedAdminRoute = ({ children }) => {
   if (allowed === null) return <div>Checking access...</div>;
 
   if (!allowed) {
-    return window.location.href = "http://localhost:3000";
+    return window.location.href = "https://refinder-lost-found-community-appli.vercel.app";
   }
 
   return children;
