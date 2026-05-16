@@ -10,7 +10,7 @@ const SuccessStoriesCarousel = () => {
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
-  fetch("http://127.0.0.1:5000/api/public/success-stories")
+  fetch("https://refinder-backend.onrender.com/api/public/success-stories")
     .then(res => res.json())
     .then(data => {
       console.log("PUBLIC STORIES:", data);
@@ -54,7 +54,7 @@ const SuccessStoriesCarousel = () => {
                   <div className="img-container">
                     <img
                       src={story.img
-                    ? `http://127.0.0.1:5000${story.img}`
+                    ? `https://refinder-backend.onrender.com${story.img}`
                     : "https://via.placeholder.com/150"}
                       alt={story.title}
                       className="img"
