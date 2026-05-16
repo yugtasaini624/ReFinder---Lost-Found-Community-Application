@@ -47,7 +47,7 @@ const SearchResults = () => {
     try {
 
       const res = await fetch(
-        "http://127.0.0.1:5000/api/all-items"
+        "https://refinder-backend.onrender.com/api/all-items"
       );
 
       const data = await res.json();
@@ -279,7 +279,7 @@ const SearchResults = () => {
                   <img
                     src={
                       item.image
-                        ? `http://127.0.0.1:5000/uploads/${item.image}`
+                        ? `https://refinder-backend.onrender.com/uploads/${item.image}`
                         : "https://via.placeholder.com/300"
                     }
                     alt={
