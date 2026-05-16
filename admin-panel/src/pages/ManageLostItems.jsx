@@ -11,7 +11,7 @@ const ManageLostItems = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://127.0.0.1:5000/api/admin/lost");
+      const res = await fetch("https://refinder-backend.onrender.com/api/admin/lost");
       const data = await res.json();
 
       setItems(Array.isArray(data.lost_items) ? data.lost_items : []);
@@ -30,7 +30,7 @@ const ManageLostItems = () => {
   // ✅ Approve → remove from UI
   const handleApprove = async (id) => {
   try {
-    const res = await fetch(`http://127.0.0.1:5000/api/admin/lost/${id}/approve`, {
+    const res = await fetch(`https://refinder-backend.onrender.com/api/admin/lost/${id}/approve`, {
       method: "PUT",
     });
 
@@ -50,7 +50,7 @@ const ManageLostItems = () => {
   // ✅ Reject → remove from UI
   const handleDelete = async (id) => {
   try {
-    const res = await fetch(`http://127.0.0.1:5000/api/admin/lost/${id}/reject`, {
+    const res = await fetch(`https://refinder-backend.onrender.com/api/admin/lost/${id}/reject`, {
       method: "PUT",
     });
 
@@ -96,7 +96,7 @@ const ManageLostItems = () => {
 
               {item.image ? (
                 <img
-                  src={`http://127.0.0.1:5000/uploads/${item.image}`}
+                  src={`https://refinder-backend.onrender.com/uploads/${item.image}`}
                   alt={item.item_name}
                   className="lost-image"
                 />
