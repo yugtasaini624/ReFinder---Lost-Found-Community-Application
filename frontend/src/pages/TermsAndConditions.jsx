@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
       <div className="terms-box">
 
         <h1>Terms & Conditions</h1>
-        <p className="updated">Last Updated: Jan 2025</p>
+        <p className="updated">Last Updated: Jan 2026</p>
 
         <section>
           <h2>1. Acceptance of Terms</h2>
