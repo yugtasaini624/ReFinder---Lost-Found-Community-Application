@@ -13,7 +13,7 @@ const SideBar = ({ isOpen, toggleSidebar }) => {
   localStorage.removeItem("user");
 
   // redirect to frontend login
-  window.location.href = "http://localhost:3000";
+  window.location.href = "https://refinder-lost-found-community-appli.vercel.app";
 };
 
   return (
