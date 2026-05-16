@@ -11,7 +11,7 @@ const AdminDashboard = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/admin/dashboard")
+    fetch("https://refinder-backend.onrender.com/api/admin/dashboard")
       .then(res => res.json())
       .then(res => {
         setData(res);
