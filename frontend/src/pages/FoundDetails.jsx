@@ -10,7 +10,7 @@ const FoundDetails = () => {
   const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/api/public/found/${id}`)
+    fetch(`https://refinder-backend.onrender.com/api/public/found/${id}`)
       .then(res => res.json())
       .then(data => setItem(data));
   }, [id]);
@@ -29,7 +29,7 @@ const FoundDetails = () => {
 
         {/* IMAGE */}
         <img
-          src={`http://127.0.0.1:5000/uploads/${item.image}`}
+          src={`https://refinder-backend.onrender.com/uploads/${item.image}`}
           alt={item.item_name}
           className="details-img"
         />
