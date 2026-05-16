@@ -19,7 +19,7 @@ const Header = ({ toggleSidebar }) => {
     localStorage.removeItem("user");
 
     // redirect
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://refinder-lost-found-community-appli.vercel.app";
   };
 
   return (
