@@ -154,11 +154,6 @@ function App() {
                 />
 
                 <Route
-                  path="/contact/:id"
-                  element={<ContactPage />}
-                />
-
-                <Route
                   path="/category/:category"
                   element={<CategoryPage />}
                 />
