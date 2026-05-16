@@ -11,7 +11,7 @@ const ManageFoundItems = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://127.0.0.1:5000/api/admin/found");
+      const res = await fetch("https://refinder-backend.onrender.com/api/admin/found");
       const data = await res.json();
 
       setItems(Array.isArray(data.found_items) ? data.found_items : []);
@@ -30,7 +30,7 @@ const ManageFoundItems = () => {
   // ✅ Approve → remove from UI
   const handleApprove = async (id) => {
   try {
-    const res = await fetch(`http://127.0.0.1:5000/api/admin/found/${id}/approve`, {
+    const res = await fetch(`https://refinder-backend.onrender.com/api/admin/found/${id}/approve`, {
       method: "PUT",
     });
 
@@ -50,7 +50,7 @@ const ManageFoundItems = () => {
   // ✅ Reject → remove from UI
   const handleDelete = async (id) => {
   try {
-    const res = await fetch(`http://127.0.0.1:5000/api/admin/found/${id}/reject`, {
+    const res = await fetch(`https://refinder-backend.onrender.com/api/admin/found/${id}/reject`, {
       method: "PUT",
     });
 
@@ -96,7 +96,7 @@ const ManageFoundItems = () => {
 
               {item.image ? (
                 <img
-                  src={`http://127.0.0.1:5000/uploads/${item.image}`}
+                  src={`https://refinder-backend.onrender.com/uploads/${item.image}`}
                   alt={item.item_name}
                   className="found-image"
                 />
