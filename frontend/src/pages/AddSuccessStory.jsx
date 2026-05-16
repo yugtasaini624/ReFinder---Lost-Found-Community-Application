@@ -18,7 +18,7 @@ const AddSuccessStory = () => {
 
     try {
       const res = await fetch(
-        "http://127.0.0.1:5000/api/user/success-story",
+        "https://refinder-backend.onrender.com/api/user/success-story",
         {
           method: "POST",
           body: formData,
