@@ -27,7 +27,7 @@ const Footer = () => {
       </div>
 
       <div className="admin-footer-bottom">
-        2026 &copy; ReFinder Admin Panel | Designed by <a href="#">Yugta</a>
+        2026 &copy; ReFinder Admin Panel | Designed by Yugta Saini
       </div>
     </footer>
   );
