@@ -24,10 +24,10 @@ const ContactFooter = () => {
         <div className="footer-social">
           <h3>Connect With Us</h3>
           <div className="social-icons">
-            <a href="#" className="facebook"><i className="fa-brands fa-facebook-f"></i></a>
-            <a href="#" className="twitter"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#" className="linkedin"><i className="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" className="instagram"><i className="fa-brands fa-instagram"></i></a>
+            <a href="/" className="facebook"><i className="fa-brands fa-facebook-f"></i></a>
+            <a href="/" className="twitter"><i className="fa-brands fa-twitter"></i></a>
+            <a href="/" className="linkedin"><i className="fa-brands fa-linkedin-in"></i></a>
+            <a href="/" className="instagram"><i className="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@ const ContactFooter = () => {
       </div>
 
       <div className="footer-bottom">
-        2026 &copy; ReFinder Limited | Designed by <a href="#">Yugta</a>
+        2026 &copy; ReFinder Limited | Designed by <a href="/">Yugta</a>
       </div>
     </footer>
   );
