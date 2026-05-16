@@ -1,0 +1,235 @@
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.dashboard {
+  padding: 24px;
+  background: #f8fafc;
+  min-height: 100vh;
+  color: #0f172a;
+  font-family: "Inter", sans-serif;
+}
+
+/* Loading / error */
+.state {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 16px;
+  color: #64748b;
+}
+
+.state.error {
+  color: #ef4444;
+}
+
+/* =========================
+   HEADER
+========================= */
+.dashboard-header {
+  margin-bottom: 20px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.main-head {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================
+   KPI GRID
+========================= */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.kpi-card {
+  padding: 16px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+}
+
+.kpi-card h2 {
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+
+.kpi-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* Colors */
+.kpi-card.green h2 { color: #16a34a; }
+.kpi-card.red h2 { color: #ef4444; }
+.kpi-card.blue h2 { color: #2563eb; }
+.kpi-card.yellow h2 { color: #f59e0b; }
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+.sub-head {
+  margin: 22px 0 10px;
+  font-size: 16px;
+  color: #334155;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.action {
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.action:hover {
+  transform: scale(1.04);
+}
+
+.action.green { background: #16a34a; }
+.action.blue { background: #2563eb; }
+.action.red { background: #ef4444; }
+.action.dark { background: #334155; }
+
+/* =========================
+   TABLE
+========================= */
+.activity-card {
+  margin-top: 22px;
+  background: white;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  overflow-x: auto;
+}
+
+.activity-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* prevents squishing */
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.status.success {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status.failed {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 14px;
+  }
+
+  .main-head {
+    font-size: 22px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+
+  .action {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  table {
+    min-width: 500px; /* horizontal scroll instead of breaking */
+  }
+
+  .activity-card {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+.howtopost-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.howtopost-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.howtopost-section {
+  margin-bottom: 25px;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.howtopost-tips {
+  background: #eef6ff;
+  padding: 15px;
+  border-radius: 12px;
+}

@@ -1,0 +1,138 @@
+/* General Page Styles */
+.upload-page {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f9fef9, #e9f3ea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px 50px;
+}
+
+/* Form Container */
+.found-page .found-form {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.found-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+/* Title and Header */
+.found-title {
+  color: #2e7d32;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Labels and Inputs */
+.found-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.found-form input,.found-form select,.found-form textarea,.found-form input[type="file"] {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.found-form input:focus,.found-form select:focus,.found-form textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.2);
+  background-color: #fff;
+}
+
+/* Buttons */
+.found-btns {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.found-btns:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(27,94,32,0.3);
+}
+
+.back-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: #090909;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Flex Grid for Rows */
+.found-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.found-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .found-form {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .found-page .found-form{
+    width: 95%;
+    padding: 20px 15px;
+    margin: 0 10px; 
+  }
+  .found-row {
+    flex-direction: column;
+  }
+  .found-title {
+    font-size: 1.6rem; 
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .back-btn {
+    margin-top: 50px;
+    align-self: center; 
+  }
+}

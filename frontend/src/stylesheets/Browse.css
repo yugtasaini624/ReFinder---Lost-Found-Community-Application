@@ -1,0 +1,150 @@
+.category-section {
+  padding: 60px 50px;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.category-header h2 {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 15px; 
+}
+
+.category-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  height: 40px;
+  font-size: 16px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+}
+
+.lostBtns{
+    background-color: red;
+}
+
+.lostBtns:hover{
+    background-color: black;
+}
+
+.foundBtns{
+    background-color: #22c55e;
+}
+
+.foundBtns:hover{
+    background-color: #333;
+}
+
+.allBtns{
+    background-color: #333;
+}
+
+.allBtns:hover{
+    background-color: #111;
+}
+
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  width: 180px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.category-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 720px) {
+  .category-section{
+    padding: 60px 20px;
+  }
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .category-header h2 {
+    font-size: 2rem;
+  }
+
+  .category-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .category-btn {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+  }
+
+  .category-cards {
+    gap: 15px;
+  }
+
+  .category-card {
+    width: 140px;
+    padding: 15px;
+  }
+
+  .category-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .category-card p {
+    font-size: 1.2rem;
+  }
+}

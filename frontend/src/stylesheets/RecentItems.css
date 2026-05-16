@@ -1,0 +1,219 @@
+.recent-section {
+  width: 100%;
+  padding: 70px 0;
+  background-color: #94d2bd;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  font-family: "Inter", system-ui, -apple-system;
+}
+
+.recent-block {
+  width: 90%;
+  margin: 0 auto;
+  padding: 28px 34px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(120, 205, 150, 0.15);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+  transition: 0.3s ease;
+}
+
+.recent-block:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.title-row h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0a3a22;
+  letter-spacing: 0.3px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(30, 140, 90, 0.15);
+  background: #0a0a0a;
+  color: #ffffff;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: #4d4c4c;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(5, 119, 63, 0.08);
+}
+
+.slider-window {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slider-window::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+/* =========================
+   COMMON CARD STYLE
+========================= */
+
+.lost-card {
+  min-width: 400px;
+  max-width: 400px;
+  display: flex;
+  gap: 18px;
+  margin-right: 22px;
+  padding: 18px;
+  background: white;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 170, 95, 0.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.35s ease;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.lost-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 160, 80, 0.25);
+}
+
+.lost-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.lost-info h3,
+.lost-card h4 {
+  margin: 0;
+  color: #0a3a22;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.lost-desc {
+  margin-top: 4px;
+  color: #416a4d;
+}
+
+.lost-meta {
+  display: flex;
+  gap: 14px;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #246842;
+}
+
+.details-btn {
+  margin-top: 10px;
+  padding: 7px 11px;
+  border-radius: 9px;
+  border: none;
+  background: linear-gradient(135deg, #66c88b, #4da76e);
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.25s ease;
+}
+
+.details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(39, 174, 96, 0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .recent-block {
+    width: 85%;
+  }
+
+  .lost-card {
+    min-width: 320px;
+    max-width: 350px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lost-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recent-block {
+    width: 75%;
+  }
+
+  .lost-card {
+    min-width: 270px;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .lost-card img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .title-row h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recent-block {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .lost-card {
+    min-width: 220px;
+    max-width: 240px;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .lost-card img {
+    width: 140px;
+    height: 120px;
+  }
+
+  .title-row h2 {
+    font-size: 20px;
+  }
+}

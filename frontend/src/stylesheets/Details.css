@@ -1,0 +1,180 @@
+
+/* PAGE */
+.fd-page {
+  min-height: 70vh;
+  background: #f7f9f7;
+  padding: 40px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.fd-card {
+  width: 100%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e6ebe6;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+  display: flex;
+  gap: 28px;
+  padding: 28px;
+}
+
+/* IMAGE */
+.fd-img {
+  width: 420px;
+  height: 320px;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* CONTENT */
+.fd-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TITLE */
+.fd-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* SUB */
+.fd-sub {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* BADGE */
+.fd-badge {
+  margin-top: 10px;
+  background: #16a34a;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* DIVIDER */
+.fd-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 12px 0;
+}
+
+/* GRID */
+.fd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* DESCRIPTION */
+.fd-desc {
+  margin-top: 10px;
+  color: #444;
+}
+
+/* IDENTIFIERS */
+.fd-identifiers {
+  margin-top: 10px;
+  color: #065f46;
+}
+
+/* BUTTON */
+.fd-actions {
+  margin-top: 16px;
+}
+
+.fd-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #166534;
+  color: white;
+  cursor: pointer;
+}
+
+/* CONTACT BOX */
+.fd-contact {
+  margin-top: 12px;
+  background: #f1f5f1;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* BACK BUTTON */
+.fd-back-btn {
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  background: #111827;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* LOADING */
+.fd-loading {
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .fd-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .fd-img {
+    width: 100%;
+    height: 260px;
+  }
+
+  .fd-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .fd-page {
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  .fd-img {
+    height: 220px;
+  }
+
+  .fd-title {
+    font-size: 1.4rem;
+  }
+
+  .fd-btn {
+    width: 100%;
+  }
+
+  .fd-back-btn {
+    top: 65px;
+    left: 10px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

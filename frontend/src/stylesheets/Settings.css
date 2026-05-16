@@ -1,0 +1,159 @@
+/* General Page */
+.settings-page {
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Card */
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  margin: 0;
+  color: #2e7d32;
+  font-size: 1.4rem;
+}
+
+/* Form */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.2);
+  background-color: #fff;
+}
+
+/* Preferences Grid */
+.preferences-card .preferences-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Buttons */
+.save-btn {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+/* Danger Zone */
+.danger-card {
+  border: 2px solid #ed2f42;
+  background-color: #ffe6e6;
+  padding: 25px;
+}
+
+.danger-card p {
+  margin-bottom: 15px;
+  color: #a83232;
+  font-weight: 500;
+}
+
+.danger-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.delete-btn {
+  background-color: #ed2f42;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #a83232;
+  transform: translateY(-2px);
+}
+
+.logout-btn {
+  background-color: #555;
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .preferences-card .preferences-grid {
+    flex-direction: column;
+  }
+}

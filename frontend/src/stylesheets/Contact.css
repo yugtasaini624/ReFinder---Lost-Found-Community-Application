@@ -1,0 +1,147 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f0f7f5;
+  font-family: "Inter", sans-serif;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1 1 400px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-info h2 {
+  font-size: 2.2rem;
+  color: #145a2a;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-box i {
+  font-size: 28px;
+  color: #43e669;
+  margin-right: 15px;
+}
+
+.info-box h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #145a2a;
+}
+
+.info-box p {
+  margin: 2px 0 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  color: #145a2a;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-form form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width:95%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+  margin: 0 10px;
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+  border-color: #4dec72;
+}
+
+.contact-form .submit-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  background-color: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #41d048;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    margin-top: -35px;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    gap: 20px;
+    padding: 0 5px;
+  }
+
+  .contact-form {
+    padding: 20px 0px;
+  }
+
+  .contact-form .submit-btn {
+    width: 100%;
+  }
+}

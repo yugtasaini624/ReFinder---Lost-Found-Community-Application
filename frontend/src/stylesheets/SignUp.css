@@ -1,0 +1,133 @@
+.signup-page {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-color: #f4f7f8; /* soft white background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+.signup-header {
+  text-align: center;
+  color: #145a2a; /* dark green */
+  margin-bottom: 25px;
+}
+.signup-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.signup-header p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Form container */
+.signup-form-container {
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #145a2a;
+}
+.form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #cde5cd; /* light green border */
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.form-group input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.2);
+}
+
+/* Primary Sign-Up button */
+.signup-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #2e7d32; /* ReFinder green */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.signup-btn:hover {
+  background-color: #41d048;
+  transform: translateY(-2px);
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+  font-size: 0.95rem;
+}
+.login-link .anchors {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.login-link .anchors:hover {
+  color: #41d048;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signup-form-container {
+    padding: 30px 20px;
+    width: 90%;
+  }
+  .signup-header h1 {
+    font-size: 2rem;
+  }
+}
+/* Checkbox */
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cde5cd;
+  border-radius: 4px;
+  accent-color: #2e7d32; /* green checkbox */
+  cursor: pointer;
+}
+.form-checkbox label .pop {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 600;
+}
+.form-checkbox label .pop:hover {
+  color: #41d048;
+  text-decoration: underline;
+}

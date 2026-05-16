@@ -1,0 +1,264 @@
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #0d2b1f;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.navLogoHeading {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.navLogoHeading .logoText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #e9ecef;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLogoHeading .nav {
+  font-size: 1.55rem;
+  color: #f8f9fa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menuButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.nav i {
+  text-decoration: none;
+  color: white;
+}
+
+.menuButtons button {
+  padding: 8px 14px;
+  width: auto;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.90rem;
+  height: 38px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  text-decoration: none;
+}
+
+.lostBtn {
+  background-color: #ed2f42;
+  color: #fff;
+}
+
+.lostBtn:hover {
+  box-shadow: 0 0 20px #ed2f42;
+  border-color: #ed2f42;
+}
+
+.foundBtn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.foundBtn:hover {
+  box-shadow: 0 0 20px #28a745;
+  border-color: #28a745;
+}
+
+.loginBtn {
+  background-color: #198754;
+  color: #fff;
+}
+
+.loginBtn:hover {
+  box-shadow: 0 0 20px #198754;
+  border-color: #198754;
+}
+
+.menuButtons button:hover {
+  border: none;
+  transform: scale(0.95);
+}
+
+.iconBtn {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease, opacity .2s ease;
+  margin-right: 0;
+}
+
+.menuButtons .iconBtn,
+.menuButtons .profileToggle {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.iconBtn.notify img {
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  margin-right: -20px;
+}
+
+.iconBtn:hover img {
+  transform: scale(1.12);
+  opacity: 0.85;
+}
+
+.profileWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profileToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  color: white;
+}
+
+.profileToggle img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 0.75rem;
+  margin-top: 1px;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: white;
+  color: black;
+  width: 160px;
+  padding: 8px 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 2000;
+  border: none;
+}
+
+.profileDropdown p {
+  padding: 10px 15px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.profileDropdown p:hover {
+  background: #f2f2f2;
+}
+
+.profileDropdown {
+  z-index: 9999;
+}
+
+@media (max-width: 815px) {
+  .mainHeader {
+    height: 60px;
+    padding: 0 12px;
+  }
+
+  .btn-text {
+    display: none !important;
+  }
+
+  .menuButtons button {
+    width: 42px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+  }
+
+  .menuButtons button i {
+    font-size: 1rem;
+  }
+
+  .navLogoHeading .logoText {
+    font-size: 1.4rem;
+  }
+
+  .navLogoHeading .nav {
+    font-size: 1.2rem;
+  }
+
+  .navLogoHeading {
+    gap: 20px;
+  }
+
+  .iconBtn.notify img,
+  .profileToggle img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .iconBtn.notify img{
+    margin-right: 5px;
+  }
+  .userName {
+    display: none;
+  }
+
+  .arrow {
+    font-size: 0.6rem;
+  }
+
+  .profileToggle {
+    padding: 4px;
+    gap: 3px;
+  }
+
+  .profileDropdown {
+    right: 0;
+    top: 40px;
+    width: 170px;
+  }
+}
+
+.l{
+  text-decoration: none;
+  color: #0d2b1f;
+}
+
+.link{
+  text-decoration: none;
+}

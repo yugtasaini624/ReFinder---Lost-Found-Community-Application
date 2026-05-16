@@ -1,0 +1,129 @@
+.adminHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #0d2b1f;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navLogoHeading {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navLogoHeading .logoText {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e9ecef;
+  cursor: pointer;
+}
+
+.navLogoHeading .nav {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #f8f9fa;
+}
+
+.menuButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.iconBtn.notify img {
+  width: 35px;
+  height: 35px;
+}
+
+.profileWrapper {
+  position: relative;
+}
+
+.profileToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.profileToggle img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.arrow {
+  font-size: 0.75rem;
+}
+
+.profileDropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  color: black;
+  width: 160px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.profileDropdown p {
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.profileDropdown p:hover {
+  background-color: #f2f2f2;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .navLogoHeading .logoText {
+    font-size: 1.4rem;
+  }
+
+  .navLogoHeading .nav {
+    font-size: 1.3rem;
+  }
+
+  .iconBtn.notify img,
+  .profileToggle img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .userName {
+    display: none;
+  }
+}
+
+.l{
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+}

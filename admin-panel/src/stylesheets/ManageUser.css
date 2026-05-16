@@ -1,0 +1,235 @@
+.manage-users-page {
+  padding: 25px 40px 70px;
+  font-family: "Poppins", sans-serif;
+  height: auto;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  padding: 10px 14px;
+  border: none;
+  background: #3498db;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.refresh-btn:hover {
+  background: #2c80b4;
+}
+
+/* Table */
+.user-table-container {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom: 60px;
+}
+
+.user-table th {
+  background: #2c3e50;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.user-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Role badge */
+.role-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.role-badge.User {
+  background: #d6e4ff;
+  color: #1f49b6;
+}
+
+.role-badge.Admin {
+  background: #ffe6d6;
+  color: #b64816;
+}
+
+/* Buttons */
+.action-buttons button {
+  margin-right: 8px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+button.view {
+  background: #ecf0f1;
+}
+
+button.delete {
+  background: #ffd6d6;
+}
+
+button.view:hover {
+  background: #d0d7db;
+}
+
+button.delete:hover {
+  background: #ffb3b3;
+}
+
+/* Loading & empty */
+.loading,
+.empty {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 380px;
+  animation: pop 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn-s {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #ffb3b3;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+
+  .manage-users-page {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .user-table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .user-table {
+    width: 100%;
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .manage-users-page {
+    padding: 15px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .user-table-container {
+    overflow-x: auto;
+  }
+
+  .user-table {
+    min-width: 600px;
+  }
+
+  .user-table th,
+  .user-table td {
+    white-space: nowrap;
+  }
+
+  .modal-content {
+    width: 95%;
+  }
+}

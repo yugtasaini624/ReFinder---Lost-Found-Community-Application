@@ -1,0 +1,274 @@
+.admin-found-container {
+  padding: 28px;
+  background: linear-gradient(180deg, #f5f7fb, #eef1f6);
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto;
+}
+
+.found-top-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  margin: 30px auto 50px;
+}
+
+.found-top-bar h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.found-top-bar input {
+  padding: 11px 14px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid #cfd5de;
+  outline: none;
+  background: white;
+  box-sizing: border-box;
+}
+
+.found-top-bar input:focus {
+  border-color: #4a7bff;
+}
+
+.found-items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.found-card {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+  border: 1px solid #eef0f3;
+}
+
+.found-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .12);
+}
+
+.found-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-tag {
+  background: #eef6ff;
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #265dbe;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.approved {
+  background: #e8ffef;
+  color: #0e7c2f;
+}
+
+.pending {
+  background: #fff3e8;
+  color: #c75807;
+}
+
+.found-desc {
+  margin: 10px 0 14px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.found-meta {
+  font-size: 13px;
+  margin-bottom: 14px;
+  color: #555;
+}
+
+.found-meta p {
+  margin: 3px 0;
+}
+
+.found-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.approve-btn {
+  background: #127c36;
+  color: white;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.delete-btn {
+  background: #d72626;
+  color: white;
+  border: none;
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.approve-btn:hover,
+.delete-btn:hover {
+  opacity: .9;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  font-size: 15px;
+  grid-column: 1 / -1;
+}
+
+.found-image { 
+  width: 100%; 
+  height: 180px; 
+  object-fit:contain; 
+  border-radius: 12px; 
+  margin-bottom: 10px; 
+} 
+
+.found-image-placeholder {
+   width: 100%; 
+   height: 180px; 
+   display: flex; 
+   align-items: center; 
+   justify-content: center; 
+   background: #f2f2f2; 
+   border-radius: 12px; 
+   margin-bottom: 10px; 
+   color: #777; 
+   font-size: 14px; 
+}
+
+.found-card-right-part {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.found-card-right-part {
+  display: flex;
+  align-items: center;
+}
+
+.found-card-right-part .badge {
+  margin-right: 10px;
+}
+
+  /* ---------- MOBILE FIRST FIXES ---------- */
+
+@media (max-width: 1024px) {
+  .admin-found-container {
+    padding: 20px;
+  }
+
+  .found-top-bar h2 {
+    font-size: 24px;
+  }
+
+  .found-top-bar input {
+    width: 230px;
+  }
+}
+
+@media (max-width: 850px) {
+  .found-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .found-top-bar input {
+    width: 100%;
+  }
+}
+
+/* ---------- GRID RESPONSIVENESS ---------- */
+
+@media (max-width: 768px) {
+  .found-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .found-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .found-card-header h3 {
+    font-size: 16px;
+  }
+
+  .found-desc {
+    font-size: 13px;
+  }
+}
+
+/* ---------- SMALL MOBILES ---------- */
+
+@media (max-width: 550px) {
+  .admin-found-container {
+    padding: 14px;
+  }
+
+  .found-top-bar h2 {
+    font-size: 20px;
+  }
+
+  .found-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .found-card {
+    border-radius: 12px;
+  }
+
+  .approve-btn,
+  .delete-btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+/* ---------- EXTRA SMALL DEVICES ---------- */
+
+@media (max-width: 400px) {
+  .found-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .category-tag {
+    font-size: 11px;
+  }
+
+  .badge {
+    font-size: 11px;
+  }
+}

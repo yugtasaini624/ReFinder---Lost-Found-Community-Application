@@ -1,0 +1,99 @@
+/* Container */
+.hiw-container {
+  padding: 60px 20px;
+  background: #f0f7f5;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hiw-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #145a2a;
+}
+
+/* Grid */
+.hiw-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card */
+.hiw-card {
+  position: relative;
+  width: 280px;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  padding-bottom: 40px; 
+}
+
+.hiw-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image */
+.hiw-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/* Content */
+.hiw-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.hiw-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #145a2a;
+}
+
+.hiw-content p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Step Circle at Bottom Border */
+.hiw-step {
+  width: 40px;
+  height: 40px;
+  background: #53c0f3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;  /* Pushed to bottom inside card */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  border: 3px solid #fff; /* Optional: border to separate from card */
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .hiw-grid {
+    gap: 25px;
+  }
+}
+
+@media(max-width: 600px){
+  .hiw-card {
+    width: 90%;
+    padding-bottom: 50px; /* extra space for step circle on small screens */
+  }
+}

@@ -1,0 +1,55 @@
+.about-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  background: #f5f7f5;
+  margin-bottom: 30px;
+}
+
+.about-card {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  border-radius: 18px;
+  padding: 30px 35px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.about-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+.about-subtitle {
+  margin-top: 18px;
+  color: #145214;
+  font-size: 1.4rem;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.about-list {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.about-list li {
+  margin-top: 6px;
+  font-size: 1.05rem;
+  list-style-type: none;
+}
+
+.about-footer {
+  margin-top: 25px;
+  font-style: italic;
+  text-align: center;
+  color: #444;
+}
