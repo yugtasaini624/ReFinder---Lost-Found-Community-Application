@@ -50,7 +50,7 @@ export default function UploadLostItems() {
       }
 
       const res = await axios.post(
-        "http://127.0.0.1:5000/api/lost",
+        "https://refinder-backend.onrender.com/api/lost",
         formDataToSend,
         {
           headers: {
