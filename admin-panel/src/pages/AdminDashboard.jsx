@@ -3,8 +3,6 @@ import { Link} from "react-router-dom"
 
 import "../stylesheets/AdminDashboard.css";
 
-const COLORS = ["#16a34a", "#2563eb", "#f59e0b", "#ef4444"];
-
 const AdminDashboard = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
