@@ -14,7 +14,7 @@ const RecentItems = () => {
   // ✅ FETCH LOST ITEMS
   const fetchLost = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/public/lost");
+      const res = await fetch("https://refinder-backend.onrender.com/api/public/lost");
       const data = await res.json();
 
       console.log("LOST:", data);
@@ -33,7 +33,7 @@ const RecentItems = () => {
   // ✅ FETCH FOUND ITEMS
   const fetchFound = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/public/found");
+      const res = await fetch("https://refinder-backend.onrender.com/api/public/found");
       const data = await res.json();
 
       console.log("FOUND:", data);
@@ -90,7 +90,7 @@ const RecentItems = () => {
                 onClick={() => navigate(`/lost/${item.id}`)}
               >
                 <img
-                  src={`http://127.0.0.1:5000/uploads/${item.image}`}
+                  src={`https://refinder-backend.onrender.com/uploads/${item.image}`}
                   alt={item.item_name}
                 />
 
@@ -137,7 +137,7 @@ const RecentItems = () => {
                 onClick={() => navigate(`/found/${item.id}`)}
               >
                 <img
-                  src={`http://127.0.0.1:5000/uploads/${item.image}`}
+                  src={`https://refinder-backend.onrender.com/uploads/${item.image}`}
                   alt={item.item_name}
                 />
 
