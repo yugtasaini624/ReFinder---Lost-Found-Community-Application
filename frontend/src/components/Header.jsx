@@ -3,25 +3,32 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import userImg from "../images/happy.png";
 
-function Header({ toggleSidebar, isLoggedIn , setIsLoggedIn}) {
+function Header({ toggleSidebar, isLoggedIn, setIsLoggedIn }) {
   const [openMenu, setOpenMenu] = useState(false);
   const navigate = useNavigate();
 
   // ✅ Logout handler
-const handleLogout = () => {
-  localStorage.removeItem("token");
-  setIsLoggedIn(false);
-  navigate("/login");
-};
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    localStorage.removeItem("role");
 
-  // ✅ Upload click guard
+    setIsLoggedIn(false);
+    setOpenMenu(false);
+
+    navigate("/login");
+  };
+
+  // ✅ Protected navigation
   const handleProtectedNavigation = (path) => {
     const token = localStorage.getItem("token");
+
     if (!token) {
       navigate("/login");
-    } else {
-      navigate(path);
+      return;
     }
+
+    navigate(path);
   };
 
   return (
@@ -31,11 +38,15 @@ const handleLogout = () => {
         <p className="nav" onClick={toggleSidebar}>
           <i className="fa-solid fa-bars"></i>
         </p>
-        <Link to="/" className="link"><p className="logoText">ReFinder</p></Link>
+
+        <Link to="/" className="link">
+          <p className="logoText">ReFinder</p>
+        </Link>
       </div>
 
       {/* Right */}
       <div className="menuButtons">
+
         {/* Upload Lost */}
         <button
           className="lostBtn"
@@ -66,27 +77,24 @@ const handleLogout = () => {
 
         {/* LOGGED IN */}
         {isLoggedIn && (
-          <>
+          <div className="profileWrapper">
+            <button
+              className="profileToggle"
+              onClick={() => setOpenMenu((prev) => !prev)}
+            >
+              <img src={userImg} alt="profile" />
+              <span className="userName">User</span>
+              <i className="fa-solid fa-chevron-down arrow"></i>
+            </button>
 
-            <div className="profileWrapper">
-              <button
-                className="profileToggle"
-                onClick={() => setOpenMenu((prev) => !prev)}
-              >
-                <img src={userImg} alt="profile" />
-                <span className="userName">User</span>
-                <i className="fa-solid fa-chevron-down arrow"></i>
-              </button>
-
-              {openMenu && (
-                <div className="profileDropdown">
-                  <p className="l logout" onClick={handleLogout}>
-                    Logout
-                  </p>
-                </div>
-              )}
-            </div>
-          </>
+            {openMenu && (
+              <div className="profileDropdown">
+                <p className="l logout" onClick={handleLogout}>
+                  Logout
+                </p>
+              </div>
+            )}
+          </div>
         )}
       </div>
     </header>
