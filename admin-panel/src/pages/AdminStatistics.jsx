@@ -31,7 +31,7 @@ const AdminStatistics = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://127.0.0.1:5000/api/admin/stats");
+      const res = await fetch("https://refinder-backend.onrender.com/api/admin/stats");
       const data = await res.json();
 
       setStats(data);
