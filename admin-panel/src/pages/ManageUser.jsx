@@ -18,7 +18,7 @@ const ManageUser = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://127.0.0.1:5000/api/admin/users");
+      const res = await fetch("https://refinder-backend.onrender.com/api/admin/users");
       const data = await res.json();
 
       setUsers(data);
@@ -35,7 +35,7 @@ const ManageUser = () => {
     if (!window.confirm("Delete this user permanently?")) return;
 
     try {
-      await fetch(`http://127.0.0.1:5000/api/admin/users/${id}`, {
+      await fetch(`https://refinder-backend.onrender.com/api/admin/users/${id}`, {
         method: "DELETE",
       });
 
