@@ -23,7 +23,6 @@ import UploadLostItems from "./pages/UploadLostItems";
 import UploadFoundItems from "./pages/UploadFoundItems";
 import MyItems from "./pages/MyItems";
 import FoundDetails from "./pages/FoundDetails";
-import ContactPage from "./pages/ContactPage";
 import CategoryPage from "./pages/CategoryPage";
 import SearchResults from "./pages/SearchResults";
 import AddSuccessStory from "./pages/AddSuccessStory";
