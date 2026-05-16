@@ -12,7 +12,7 @@ function FoundItems() {
 
   const fetchItems = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/public/found");
+      const res = await fetch("https://refinder-backend.onrender.com/api/public/found");
       const data = await res.json();
 
       setItems(Array.isArray(data.found_items) ? data.found_items : []);
@@ -71,7 +71,7 @@ function FoundItems() {
             <img
               src={
                   item.image
-                    ? `http://127.0.0.1:5000/uploads/${item.image}`
+                    ? `https://refinder-backend.onrender.com/uploads/${item.image}`
                     : "https://via.placeholder.com/150"
                 }
               className="lost-img"
