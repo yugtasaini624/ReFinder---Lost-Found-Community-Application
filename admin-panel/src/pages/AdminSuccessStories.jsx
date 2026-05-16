@@ -5,13 +5,13 @@ const AdminSuccessStories = () => {
   const [stories, setStories] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/admin/success-stories")
+    fetch("https://refinder-backend.onrender.com/api/admin/success-stories")
       .then(res => res.json())
       .then(data => setStories(data));
   }, []);
 
   const approveStory = async (id) => {
-    await fetch(`http://127.0.0.1:5000/api/admin/success-stories/approve/${id}`, {
+    await fetch(`https://refinder-backend.onrender.com/api/admin/success-stories/approve/${id}`, {
       method: "PUT",
     });
 
@@ -19,7 +19,7 @@ const AdminSuccessStories = () => {
   };
 
   const rejectStory = async (id) => {
-    await fetch(`http://127.0.0.1:5000/api/admin/success-stories/reject/${id}`, {
+    await fetch(`https://refinder-backend.onrender.com/api/admin/success-stories/reject/${id}`, {
       method: "PUT",
     });
 
@@ -41,7 +41,7 @@ const AdminSuccessStories = () => {
           <div key={story.id} className="admin-card">
 
             <img
-              src={`http://127.0.0.1:5000/uploads/${story.image}`}
+              src={`https://refinder-backend.onrender.com/uploads/${story.image}`}
               alt={story.title}
               className="admin-img"
             />
