@@ -34,7 +34,7 @@ const MyItems = () => {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://127.0.0.1:5000/api/my-items",
+        "https://refinder-backend.onrender.com/api/my-items",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -87,8 +87,8 @@ const MyItems = () => {
 
       const url =
         itemType === "lost"
-          ? `http://127.0.0.1:5000/api/lost/${item.id}`
-          : `http://127.0.0.1:5000/api/found/${item.id}`;
+          ? `https://refinder-backend.onrender.com/api/lost/${item.id}`
+          : `https://refinder-backend.onrender.com/api/found/${item.id}`;
 
       const res = await fetch(url, {
         method: "DELETE",
@@ -172,8 +172,8 @@ const MyItems = () => {
 
       const url =
         itemType === "lost"
-          ? `http://127.0.0.1:5000/api/lost/${selectedItem.id}`
-          : `http://127.0.0.1:5000/api/found/${selectedItem.id}`;
+          ? `https://refinder-backend.onrender.com/api/lost/${selectedItem.id}`
+          : `https://refinder-backend.onrender.com/api/found/${selectedItem.id}`;
 
       const res = await fetch(url, {
 
@@ -312,7 +312,7 @@ const MyItems = () => {
                   <img
                     src={
                       item.image
-                        ? `http://127.0.0.1:5000/uploads/${item.image}`
+                        ? `https://refinder-backend.onrender.com/uploads/${item.image}`
                         : "https://via.placeholder.com/400x300"
                     }
                     alt={item.name || "item"}
