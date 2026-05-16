@@ -17,11 +17,10 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <div className="links">
             <Link to="/admin">Dashboard</Link>
-            <Link to="/admin/users">Manage Users</Link>
+            <Link to="/admin/manageusers">Manage Users</Link>
             <Link to="/admin/lost-items">Lost Items</Link>
             <Link to="/admin/found-items">Found Items</Link>
-            <Link to="/admin/reports">Reports</Link>
-            <Link to="/admin/settings">Settings</Link>
+            <Link to="/admin/story">Success Story</Link>
           </div>
         </div>
 
